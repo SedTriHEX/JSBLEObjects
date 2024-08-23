@@ -1,3 +1,25 @@
 {
-  
+	"parameters": 
+	[
+	],
+	"objects": 
+	[
+		{
+			"first-name": "test",
+			"second-name": "Test",
+			"enemy-group": "effects",
+			"type-object": "warning-outro",
+			"spawn-name": "Test",
+			"parameters": 
+			{
+				"position": true,
+				"random-position": false,
+				"warning-time": 10000,
+				"outro-time": 2000,
+				"others":
+				[
+				]
+			}
+		}
+  ]
 }
