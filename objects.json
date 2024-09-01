@@ -1,1 +1,44 @@
-{"parameters": [],"objects": [ { "first-name": "test", "second-name": "Test", "enemy-group": "effects", "type-object": "warning-outro", "spawn-name": "Test", "parameters":  { "position": true, "random-position": false, "warning-time": 10000, "outro-time": 2000, "others": [ ] } }, { "first-name": "CavernWater", "second-name": "Cavern Water", "enemy-group": "other", "type-object": "only-warning", "spawn-name": "CavernWater", "parameters":  { "position": true, "random-position": true, "warning-time": 1000, "outro-time": 0, "others": [ ] } }]}
+{
+  "parameters": [],
+  "objects": [
+    {
+      "first-name": "test",
+      "second-name": "Test",
+      "enemy-group": "effects",
+      "type-object": "warning-outro",
+      "spawn-name": "Test",
+      "parameters": {
+        "position": true,
+        "random-position": false,
+        "warning-time": 10000,
+        "outro-time": 2000,
+        "others": []
+      }
+    },
+    {
+      "first-name": "CavernWater",
+      "second-name": "Cavern Water",
+      "enemy-group": "other",
+      "type-object": "only-warning",
+      "spawn-name": "CavernWater",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 0,
+        "others": []
+      }
+    }
+  ],
+  "spawnMessages":
+  [
+    {
+      "spawn-name": "test",
+      "messages": 
+      [
+          "test_1",
+          "test_{float} - test"
+      ]
+    }    
+  ]
+}
