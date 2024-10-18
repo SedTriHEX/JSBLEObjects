@@ -1,1 +1,4433 @@
-{"parameters":[{"id":"sideChoice","first-name":"modelSide","second-name":"Side","export-path":"modelSide/value","type":"side","default-value":"0","visible":true,"contains-param-field":true},{"id":"rotationOffest","first-name":"rotOffset","second-name":"Rotation Offest","export-path":"rotOffset/value","type":"float","default-value":"0","visible":true,"contains-param-field":true},{"id":"visual_SpikeBar","first-name":"visual","second-name":"visual","export-path":"visual/value","type":"string-array","default-value":"ENEMY_SPIKE_BAR|ENEMY_SPIKE_BAR_2","visible":true,"contains-param-field":true},{"id":"size_100","first-name":"size","second-name":"size","export-path":"size/value","type":"float","default-value":"100","visible":true,"contains-param-field":true},{"id":"rotOffset_0","first-name":"rotOffset","second-name":"rotOffset","export-path":"rotOffset/value","type":"float","default-value":"0","visible":true,"contains-param-field":true},{"id":"vx_0","first-name":"vx","second-name":"vx","export-path":"vx/value","type":"float","default-value":"0","visible":true,"contains-param-field":true},{"id":"vy_0","first-name":"vy","second-name":"vy","export-path":"vy/value","type":"float","default-value":"0","visible":true,"contains-param-field":true},{"id":"target_","first-name":"Target","second-name":"Target","export-path":"target/value","type":"spawn-target","default-value":"","visible":true,"contains-param-field":true,"original-jsb-param-name":"target"},{"id":"modelSide_","first-name":"modelSide","second-name":"modelSide","export-path":"modelSide/value","type":"side","default-value":"","visible":true,"contains-param-field":true}],"objects":[{"first-name":"CavernWater","second-name":"Cavern Water","enemy-group":"attacks","type-object":"warning","spawn-name":"CavernWater","parameters":{"position":true,"random-position":true,"warning-time":1000,"outro-time":0,"others":[]}},{"first-name":"onTheRunGo","second-name":"On The Run Go","enemy-group":"effects","type-object":"outro","spawn-name":"onTheRunGo","parameters":{"position":true,"random-position":true,"warning-time":0,"outro-time":5000,"others":[{"param-id":"sideChoice"}]}},{"first-name":"RDE_Potion","second-name":"RDE Potion","enemy-group":"attacks","type-object":"warning-outro","spawn-name":"RDE_Potion","parameters":{"position":true,"random-position":true,"warning-time":2000,"outro-time":3000,"others":[{"param-id":"rotationOffest"}]}},{"first-name":"SpikeBar","second-name":"SpikeBar","enemy-group":"attacks","type-object":"warning-outro","spawn-name":"SpikeBar","parameters":{"position":true,"random-position":true,"warning-time":1000,"outro-time":500,"Others":[{"param-id":"rotOffset_0"},{"param-id":"size_100"},{"param-id":"visual_SpikeBar"}]}},{"first-name":"EffectVelocity","second-name":"EffectVelocity","enemy-group":"effects","type-object":"time","spawn-name":"EffectVelocity","parameters":{"position":true,"random-position":true,"warning-time":0,"outro-time":0,"Others":[{"param-id":"vx_0"},{"param-id":"vy_0"},{"param-id":"target_"}]}},{"first-name":"CavernSpikes","second-name":"CavernSpikes","enemy-group":"attacks","type-object":"warning-outro","spawn-name":"CavernSpikes","parameters":{"position":true,"random-position":true,"warning-time":1500,"outro-time":500,"Others":[{"param-id":"modelSide_"}]}}],"spawnMessages":[]}
+{
+  "objects": [
+    {
+      "first-name": "Bomb",
+      "second-name": "Bomb",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "Bomb",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "FlameThrower",
+      "second-name": "FlameThrower",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "FlameThrower",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "RingShrink",
+      "second-name": "RingShrink",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "RingShrink",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 350,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "Pills",
+      "second-name": "Pills",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "Pills",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "bpm_0"
+          },
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "invert_False"
+          },
+          {
+            "param-id": "autoShakeCam_False"
+          },
+          {
+            "param-id": "autoRotate_True"
+          },
+          {
+            "param-id": "jumpDistance_100"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "LuiKangKick",
+      "second-name": "LuiKangKick",
+      "enemy-group": "other",
+      "type-object": "warning",
+      "spawn-name": "LuiKangKick",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 500,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "LuiKangBicycleKick",
+      "second-name": "LuiKangBicycleKick",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "LuiKangBicycleKick",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "LuiKangUppercut",
+      "second-name": "LuiKangUppercut",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "LuiKangUppercut",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1500,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "LuiKangFireball",
+      "second-name": "LuiKangFireball",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "LuiKangFireball",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1800,
+        "outro-time": 1000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "Boss2",
+      "second-name": "Boss2",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "Boss2",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "Boss2_Atk5",
+      "second-name": "Boss2_Atk5",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "Boss2_Atk5",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "modelSide_"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxBoss2Outro",
+      "second-name": "FxBoss2Outro",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "FxBoss2Outro",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "TriangleSquid",
+      "second-name": "TriangleSquid",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "TriangleSquid",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "modelSide_right"
+          },
+          {
+            "param-id": "speed_1000"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "PyramidSnake",
+      "second-name": "PyramidSnake",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "PyramidSnake",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "speed_7"
+          },
+          {
+            "param-id": "wiggleSpeed_15"
+          },
+          {
+            "param-id": "wiggleAngle_100"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "Shockwave",
+      "second-name": "Shockwave",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "Shockwave",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "EffectDeleteAll",
+      "second-name": "EffectDeleteAll",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "EffectDeleteAll",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "Beat",
+      "second-name": "Beat",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "Beat",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "CavernTriangleGlowBunch",
+      "second-name": "CavernTriangleGlowBunch",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "CavernTriangleGlowBunch",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "CavernSpikes",
+      "second-name": "CavernSpikes",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "CavernSpikes",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1500,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "modelSide_"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "CavernTriangleLaser",
+      "second-name": "CavernTriangleLaser",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "CavernTriangleLaser",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxPlescoCheckerSquare",
+      "second-name": "FxPlescoCheckerSquare",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "FxPlescoCheckerSquare",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 1000,
+        "Others": [
+          {
+            "param-id": "modelSide_"
+          },
+          {
+            "param-id": "size_40"
+          },
+          {
+            "param-id": "startFromEdge_False"
+          },
+          {
+            "param-id": "bpm_126"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxPlescoCheckerSquareWall",
+      "second-name": "FxPlescoCheckerSquareWall",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "FxPlescoCheckerSquareWall",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 1000,
+        "Others": [
+          {
+            "param-id": "modelSide_"
+          },
+          {
+            "param-id": "size_40"
+          },
+          {
+            "param-id": "startFromEdge_False"
+          },
+          {
+            "param-id": "bpm_126"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxPlescoMidBoss",
+      "second-name": "FxPlescoMidBoss",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "FxPlescoMidBoss",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "CamPos",
+      "second-name": "CamPos",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "CamPos",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "SlowDownEffect",
+      "second-name": "SlowDownEffect",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "SlowDownEffect",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "CavernWater",
+      "second-name": "CavernWater",
+      "enemy-group": "other",
+      "type-object": "warning",
+      "spawn-name": "CavernWater",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "substepDrop",
+      "second-name": "substepDrop",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "substepDrop",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "SubStepWall",
+      "second-name": "SubStepWall",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SubStepWall",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1500,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "modelSide_"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "autoShakeCam_True"
+          },
+          {
+            "param-id": "shadowVisible_True"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SubStepBeam",
+      "second-name": "SubStepBeam",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SubStepBeam",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1500,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "modelSide_"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "autoShakeCam_True"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxSquareLine",
+      "second-name": "FxSquareLine",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "FxSquareLine",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 5000,
+        "Others": [
+          {
+            "param-id": "customChoice_FxSquareLine"
+          },
+          {
+            "param-id": "rotOffset_45"
+          },
+          {
+            "param-id": "size_40"
+          },
+          {
+            "param-id": "bpm_126"
+          },
+          {
+            "param-id": "wiggleSpeed_0"
+          },
+          {
+            "param-id": "limit_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "fxLineBowser",
+      "second-name": "fxLineBowser",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "fxLineBowser",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 2000,
+        "Others": [
+          {
+            "param-id": "customChoice_fxLineBowser"
+          },
+          {
+            "param-id": "rotOffset_45"
+          },
+          {
+            "param-id": "size_40"
+          },
+          {
+            "param-id": "delayIntro_30"
+          },
+          {
+            "param-id": "rotationSpeed_0"
+          },
+          {
+            "param-id": "rotItself_0"
+          },
+          {
+            "param-id": "autoRotateEach_True"
+          },
+          {
+            "param-id": "placeOnGrid_True"
+          },
+          {
+            "param-id": "speed_0"
+          },
+          {
+            "param-id": "distBetween_44"
+          },
+          {
+            "param-id": "direction_0"
+          },
+          {
+            "param-id": "leftNum_3"
+          },
+          {
+            "param-id": "rightNum_3"
+          },
+          {
+            "param-id": "wiggle_0"
+          },
+          {
+            "param-id": "wiggleSpeed_0"
+          },
+          {
+            "param-id": "wiggleRotBetween_90"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "fxLineOfRoundSpikes",
+      "second-name": "fxLineOfRoundSpikes",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "fxLineOfRoundSpikes",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 2000,
+        "Others": [
+          {
+            "param-id": "customChoice_fxLineOfRoundSpikes"
+          },
+          {
+            "param-id": "rotOffset_45"
+          },
+          {
+            "param-id": "size_40"
+          },
+          {
+            "param-id": "delayIntro_30"
+          },
+          {
+            "param-id": "rotationSpeed_0"
+          },
+          {
+            "param-id": "rotItself_0"
+          },
+          {
+            "param-id": "autoRotateEach_True"
+          },
+          {
+            "param-id": "placeOnGrid_True"
+          },
+          {
+            "param-id": "speed_0"
+          },
+          {
+            "param-id": "distBetween_44"
+          },
+          {
+            "param-id": "direction_0"
+          },
+          {
+            "param-id": "num_5"
+          },
+          {
+            "param-id": "wiggle_0"
+          },
+          {
+            "param-id": "wiggleSpeed_0"
+          },
+          {
+            "param-id": "wiggleRotBetween_90"
+          },
+          {
+            "param-id": "autoStopCreatingOutSideOfCam_True"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "contraEnemy",
+      "second-name": "contraEnemy",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "contraEnemy",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "bounceOffWall_True"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "rotOffset_45"
+          },
+          {
+            "param-id": "speed_5"
+          },
+          {
+            "param-id": "speedDestroy_1"
+          },
+          {
+            "param-id": "linkAnim_contraEnemy"
+          },
+          {
+            "param-id": "edgeAnim_contraEnemy"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "BeamGroup",
+      "second-name": "BeamGroup",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "BeamGroup",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 350,
+        "Others": [
+          {
+            "param-id": "spikes_10"
+          },
+          {
+            "param-id": "rotOffset_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxSpectrumBar",
+      "second-name": "FxSpectrumBar",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "FxSpectrumBar",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "width_100"
+          },
+          {
+            "param-id": "widthRandom_300"
+          },
+          {
+            "param-id": "reverseAnim_False"
+          },
+          {
+            "param-id": "limit_20"
+          },
+          {
+            "param-id": "wiggleSpeed_20"
+          },
+          {
+            "param-id": "widthRandomDelay_150"
+          },
+          {
+            "param-id": "customChoice_FxSpectrumBar"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxChaosgame",
+      "second-name": "FxChaosgame",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "FxChaosgame",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 5000,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "size_325"
+          },
+          {
+            "param-id": "numPoints_0"
+          },
+          {
+            "param-id": "moveScale_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "BossNewGame",
+      "second-name": "BossNewGame",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "BossNewGame",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "GlitchMusicEffect",
+      "second-name": "GlitchMusicEffect",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "GlitchMusicEffect",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "speed_10"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "bossCloseToMe",
+      "second-name": "bossCloseToMe",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "bossCloseToMe",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 1000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "bossCloseToMeEnd",
+      "second-name": "bossCloseToMeEnd",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "bossCloseToMeEnd",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "FxAvalanche",
+      "second-name": "FxAvalanche",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "FxAvalanche",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 5000,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "speed_5"
+          },
+          {
+            "param-id": "width_720"
+          },
+          {
+            "param-id": "followCam_False"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxShootingStar",
+      "second-name": "FxShootingStar",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "FxShootingStar",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 1750,
+        "Others": [
+          {
+            "param-id": "rotOffset_30"
+          },
+          {
+            "param-id": "speed_10"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "bossFinalBoss1",
+      "second-name": "bossFinalBoss1",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "bossFinalBoss1",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "bossFinalBoss2",
+      "second-name": "bossFinalBoss2",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "bossFinalBoss2",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "bossFinalBoss2Caterpillar",
+      "second-name": "bossFinalBoss2Caterpillar",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "bossFinalBoss2Caterpillar",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "speed_7"
+          },
+          {
+            "param-id": "wiggleSpeed_15"
+          },
+          {
+            "param-id": "wiggleAngle_100"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "fxBubble",
+      "second-name": "fxBubble",
+      "enemy-group": "other",
+      "type-object": "warning",
+      "spawn-name": "fxBubble",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "spikes_8"
+          },
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "modelSide_"
+          },
+          {
+            "param-id": "speed_15"
+          },
+          {
+            "param-id": "flashWhiteOnBoom_False"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "fxBossFinal2Vine",
+      "second-name": "fxBossFinal2Vine",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "fxBossFinal2Vine",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 5000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "fxBossFinal3Intro",
+      "second-name": "fxBossFinal3Intro",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "fxBossFinal3Intro",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "bossFinalBoss3",
+      "second-name": "bossFinalBoss3",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "bossFinalBoss3",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "Wheel",
+      "second-name": "Wheel",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "Wheel",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 2000,
+        "Others": [
+          {
+            "param-id": "customChoice_Wheel"
+          },
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "num_2"
+          },
+          {
+            "param-id": "rotationSpeedX_0"
+          },
+          {
+            "param-id": "rotationSpeedY_0"
+          },
+          {
+            "param-id": "delay_0"
+          },
+          {
+            "param-id": "distFromCenterX_150"
+          },
+          {
+            "param-id": "distFromCenterY_150"
+          },
+          {
+            "param-id": "withCenter_False"
+          },
+          {
+            "param-id": "withLines_False"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SevconCircle",
+      "second-name": "SevconCircle",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "SevconCircle",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "SquareWave",
+      "second-name": "SquareWave",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SquareWave",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "direction_0"
+          },
+          {
+            "param-id": "speed_0"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "rotSpeed_0"
+          },
+          {
+            "param-id": "static_False"
+          },
+          {
+            "param-id": "withCenter_False"
+          },
+          {
+            "param-id": "ammoSpeed_0"
+          },
+          {
+            "param-id": "visual_SquareWave"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SquareWaveMsg",
+      "second-name": "SquareWaveMsg",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SquareWaveMsg",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "target"
+          },
+          {
+            "param-id": "pickOnlyOneRandom_False"
+          },
+          {
+            "param-id": "modelSide_"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "EffectVelocity",
+      "second-name": "EffectVelocity",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "EffectVelocity",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "vx_0"
+          },
+          {
+            "param-id": "vy_0"
+          },
+          {
+            "param-id": "target"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "bossVolcan",
+      "second-name": "bossVolcan",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "bossVolcan",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "bossVolcanRoundAtk",
+      "second-name": "bossVolcanRoundAtk",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "bossVolcanRoundAtk",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "bossVolcanContraRound",
+      "second-name": "bossVolcanContraRound",
+      "enemy-group": "other",
+      "type-object": "warning",
+      "spawn-name": "bossVolcanContraRound",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1550,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "size_0"
+          },
+          {
+            "param-id": "splash_False"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "BossVolcanLavaPlatform",
+      "second-name": "BossVolcanLavaPlatform",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "BossVolcanLavaPlatform",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "LavaPlatformAnimated",
+      "second-name": "LavaPlatformAnimated",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "LavaPlatformAnimated",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 700,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "FxIntoTheZoneBack",
+      "second-name": "FxIntoTheZoneBack",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "FxIntoTheZoneBack",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 2000,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxIntoTheZoneSquareIn",
+      "second-name": "FxIntoTheZoneSquareIn",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "FxIntoTheZoneSquareIn",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 2000,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "BeamMoving",
+      "second-name": "BeamMoving",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "BeamMoving",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 2000,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "reduceSize_0"
+          },
+          {
+            "param-id": "reduceSpeedEase_100"
+          },
+          {
+            "param-id": "reverseSpeed_False"
+          },
+          {
+            "param-id": "autoShakeCam_True"
+          },
+          {
+            "param-id": "speed_0"
+          },
+          {
+            "param-id": "shakeOnIdle_False"
+          },
+          {
+            "param-id": "visual_BeamMoving"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "WallRoundGoesTowardsPlayerOnMsg",
+      "second-name": "WallRoundGoesTowardsPlayerOnMsg",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "WallRoundGoesTowardsPlayerOnMsg",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "directionMove_0"
+          },
+          {
+            "param-id": "startMovingAfterWarning_False"
+          },
+          {
+            "param-id": "modelSide_"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "fxPlus",
+      "second-name": "fxPlus",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "fxPlus",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "rotOffset_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "CoolFriendsSaw",
+      "second-name": "CoolFriendsSaw",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "CoolFriendsSaw",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 5000,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "CoolFriendsBelt",
+      "second-name": "CoolFriendsBelt",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "CoolFriendsBelt",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 5000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "CoolFriendsHugeSaw",
+      "second-name": "CoolFriendsHugeSaw",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "CoolFriendsHugeSaw",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 5000,
+        "Others": [
+          {
+            "param-id": "reversed_False"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SquareCorner",
+      "second-name": "SquareCorner",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SquareCorner",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "rotSpeed_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxClashDiamond",
+      "second-name": "FxClashDiamond",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "FxClashDiamond",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 1000,
+        "Others": [
+          {
+            "param-id": "speedRotX_1"
+          },
+          {
+            "param-id": "speedRotY_0.5"
+          },
+          {
+            "param-id": "xDistance_600"
+          },
+          {
+            "param-id": "yDistance_300"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "visual_FxClashDiamond"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxClashCannon",
+      "second-name": "FxClashCannon",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "FxClashCannon",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 10000,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "visual_FxClashCannon"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "fxPiston",
+      "second-name": "fxPiston",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "fxPiston",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "visual_fxPiston"
+          },
+          {
+            "param-id": "rotOffset_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SpectraStage",
+      "second-name": "SpectraStage",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "SpectraStage",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 5000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "BlackHoleSpectra",
+      "second-name": "BlackHoleSpectra",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "BlackHoleSpectra",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 1750,
+        "Others": [
+          {
+            "param-id": "size_180"
+          },
+          {
+            "param-id": "speed_1"
+          },
+          {
+            "param-id": "sizeMax_280"
+          },
+          {
+            "param-id": "dontFlashWhite_False"
+          },
+          {
+            "param-id": "placeOnGrid_False"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SpectraRoomMsg",
+      "second-name": "SpectraRoomMsg",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SpectraRoomMsg",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "SpectraTriangleLine",
+      "second-name": "SpectraTriangleLine",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SpectraTriangleLine",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "SpectraIntor",
+      "second-name": "SpectraIntor",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SpectraIntor",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "SpectraHexagonEnd",
+      "second-name": "SpectraHexagonEnd",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SpectraHexagonEnd",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SpectraStageEnd",
+      "second-name": "SpectraStageEnd",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "SpectraStageEnd",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 5000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "FxTryThisStage",
+      "second-name": "FxTryThisStage",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "FxTryThisStage",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 5000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "FxTryThisIntro",
+      "second-name": "FxTryThisIntro",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "FxTryThisIntro",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 5000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "TryThisBlackHole",
+      "second-name": "TryThisBlackHole",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "TryThisBlackHole",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1750,
+        "Others": [
+          {
+            "param-id": "size_360"
+          },
+          {
+            "param-id": "speed_1"
+          },
+          {
+            "param-id": "dontFlashWhite_False"
+          },
+          {
+            "param-id": "fadeInAlpha_False"
+          },
+          {
+            "param-id": "xDistance_200"
+          },
+          {
+            "param-id": "yDistance_100"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "TryThisBlackHoleMsg",
+      "second-name": "TryThisBlackHoleMsg",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "TryThisBlackHoleMsg",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "target"
+          },
+          {
+            "param-id": "isHalf_False"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "TryThisGrenade",
+      "second-name": "TryThisGrenade",
+      "enemy-group": "other",
+      "type-object": "warning",
+      "spawn-name": "TryThisGrenade",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "modelSide_"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SawOnRail",
+      "second-name": "SawOnRail",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "SawOnRail",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "direction_0"
+          },
+          {
+            "param-id": "speed_5"
+          },
+          {
+            "param-id": "showWarning_True"
+          },
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "speedRotate_3"
+          },
+          {
+            "param-id": "widthRotate_100"
+          },
+          {
+            "param-id": "rotateItselfSpeed_0"
+          },
+          {
+            "param-id": "warningDoDmg_False"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "onTheRunGo",
+      "second-name": "onTheRunGo",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "onTheRunGo",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 5000,
+        "Others": [
+          {
+            "param-id": "modelSide_"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SpikeBar",
+      "second-name": "SpikeBar",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SpikeBar",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "visual_SpikeBar"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "borderHardcore",
+      "second-name": "borderHardcore",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "borderHardcore",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "FxTokyoSkiesDiamond",
+      "second-name": "FxTokyoSkiesDiamond",
+      "enemy-group": "other",
+      "type-object": "warning",
+      "spawn-name": "FxTokyoSkiesDiamond",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "speed_0.5"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "visual_FxTokyoSkiesDiamond"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "specterShiro",
+      "second-name": "specterShiro",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "specterShiro",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "rotateSpeed_8"
+          },
+          {
+            "param-id": "doIntroShake_True"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "specterLittleGhost",
+      "second-name": "specterLittleGhost",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "specterLittleGhost",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "specterGhostDance",
+      "second-name": "specterGhostDance",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "specterGhostDance",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "specterLittleGhostOut",
+      "second-name": "specterLittleGhostOut",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "specterLittleGhostOut",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "RoundSpikesUnder",
+      "second-name": "RoundSpikesUnder",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "RoundSpikesUnder",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "visual_RoundSpikesUnder"
+          },
+          {
+            "param-id": "direction_0"
+          },
+          {
+            "param-id": "size_50"
+          },
+          {
+            "param-id": "speed_5"
+          },
+          {
+            "param-id": "showAppearFx_True"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "RDE_BombKillbot",
+      "second-name": "RDE_BombKillbot",
+      "enemy-group": "other",
+      "type-object": "warning",
+      "spawn-name": "RDE_BombKillbot",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "modelSide_"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "RDE_Bomb",
+      "second-name": "RDE_Bomb",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "RDE_Bomb",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "RDE_Potion",
+      "second-name": "RDE_Potion",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "RDE_Potion",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 3000,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "RDE_Potion4",
+      "second-name": "RDE_Potion4",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "RDE_Potion4",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 3000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "RDEWater",
+      "second-name": "RDEWater",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "RDEWater",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 3000,
+        "Others": [
+          {
+            "param-id": "speed_1"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "RDE_Quarble",
+      "second-name": "RDE_Quarble",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "RDE_Quarble",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "Dan_Intro",
+      "second-name": "Dan_Intro",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "Dan_Intro",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "Dan_Arrow",
+      "second-name": "Dan_Arrow",
+      "enemy-group": "other",
+      "type-object": "warning",
+      "spawn-name": "Dan_Arrow",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "speed_15"
+          },
+          {
+            "param-id": "size_100"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "Dan_BlockDestroy",
+      "second-name": "Dan_BlockDestroy",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "Dan_BlockDestroy",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "size_100"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "Kubbi_Cauldron",
+      "second-name": "Kubbi_Cauldron",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "Kubbi_Cauldron",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "Kubbi_Trumpet",
+      "second-name": "Kubbi_Trumpet",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "Kubbi_Trumpet",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "spikes_3"
+          },
+          {
+            "param-id": "modelSide_"
+          },
+          {
+            "param-id": "speed_100"
+          },
+          {
+            "param-id": "shootOnceAuto_False"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "Kubbi_Scepter",
+      "second-name": "Kubbi_Scepter",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "Kubbi_Scepter",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "Kubbi_Crown",
+      "second-name": "Kubbi_Crown",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "Kubbi_Crown",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "Kubbi_ScepterThrow",
+      "second-name": "Kubbi_ScepterThrow",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "Kubbi_ScepterThrow",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "speed_0"
+          },
+          {
+            "param-id": "rotOffset_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "COD_Trail",
+      "second-name": "COD_Trail",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "COD_Trail",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 1000,
+        "Others": [
+          {
+            "param-id": "distanceX_1"
+          },
+          {
+            "param-id": "distanceY_1"
+          },
+          {
+            "param-id": "speedX_25"
+          },
+          {
+            "param-id": "speedY_10"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "visual_COD_Trail"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "COD_Solo_Ball",
+      "second-name": "COD_Solo_Ball",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "COD_Solo_Ball",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "rotSpeed_0"
+          },
+          {
+            "param-id": "speedX_15"
+          },
+          {
+            "param-id": "speedY_4"
+          },
+          {
+            "param-id": "AmmoSpeed_0.1"
+          },
+          {
+            "param-id": "AmmoPerSec_10"
+          },
+          {
+            "param-id": "speed_2"
+          },
+          {
+            "param-id": "size_150"
+          },
+          {
+            "param-id": "visual_COD_Solo_Ball"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "TrailEffect",
+      "second-name": "TrailEffect",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "TrailEffect",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "target"
+          },
+          {
+            "param-id": "Lenght_4"
+          },
+          {
+            "param-id": "Distance_3"
+          },
+          {
+            "param-id": "Position/Ease_True"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "EffectSendToBackFront",
+      "second-name": "EffectSendToBackFront",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "EffectSendToBackFront",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "target"
+          },
+          {
+            "param-id": "layer_EffectSendToBackFront"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "PivotRotate",
+      "second-name": "PivotRotate",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "PivotRotate",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": [
+          {
+            "param-id": "target"
+          },
+          {
+            "param-id": "speed_1"
+          },
+          {
+            "param-id": "targetSpeed_1"
+          },
+          {
+            "param-id": "speedEasing_PivotRotate"
+          },
+          {
+            "param-id": "speedAsDegrees_True"
+          },
+          {
+            "param-id": "targetRadius_-1"
+          },
+          {
+            "param-id": "radiusEasing_PivotRotate"
+          },
+          {
+            "param-id": "rotateVisual_True"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "PivotRotatePos",
+      "second-name": "PivotRotatePos",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "PivotRotatePos",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": [
+          {
+            "param-id": "target"
+          },
+          {
+            "param-id": "speedX_1"
+          },
+          {
+            "param-id": "speedY_1"
+          },
+          {
+            "param-id": "absolute_True"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "FxSquareLineRounded",
+      "second-name": "FxSquareLineRounded",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "FxSquareLineRounded",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 5000,
+        "Others": [
+          {
+            "param-id": "customChoice_FxSquareLineRounded"
+          },
+          {
+            "param-id": "rotOffset_45"
+          },
+          {
+            "param-id": "size_40"
+          },
+          {
+            "param-id": "bpm_126"
+          },
+          {
+            "param-id": "wiggleSpeed_0"
+          },
+          {
+            "param-id": "limit_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "BeamBorderless",
+      "second-name": "BeamBorderless",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "BeamBorderless",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 350,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "height_100"
+          },
+          {
+            "param-id": "autoShakeCam_True"
+          },
+          {
+            "param-id": "shakeOnIdle_False"
+          },
+          {
+            "param-id": "visual_BeamBorderless"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "Equalizer",
+      "second-name": "Equalizer",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "Equalizer",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 2000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "BossSpider",
+      "second-name": "BossSpider",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "BossSpider",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "BossSpiderLaughIn",
+      "second-name": "BossSpiderLaughIn",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "BossSpiderLaughIn",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "hardcore_False"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "BossSpiderWalkLeft",
+      "second-name": "BossSpiderWalkLeft",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "BossSpiderWalkLeft",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "SpiderLittle",
+      "second-name": "SpiderLittle",
+      "enemy-group": "other",
+      "type-object": "warning",
+      "spawn-name": "SpiderLittle",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 2000,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "speed_3"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SpiderLittle2",
+      "second-name": "SpiderLittle2",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "SpiderLittle2",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "speed_3"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SpiderAngry",
+      "second-name": "SpiderAngry",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "SpiderAngry",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "SpiderBG",
+      "second-name": "SpiderBG",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SpiderBG",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 500,
+        "outro-time": 1500,
+        "Others": [
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "hardcore_False"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SpiderWebAtk",
+      "second-name": "SpiderWebAtk",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SpiderWebAtk",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 500,
+        "outro-time": 1500,
+        "Others": [
+          {
+            "param-id": "size_100"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SpiderCam",
+      "second-name": "SpiderCam",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "SpiderCam",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "SpiderBG_MSG",
+      "second-name": "SpiderBG_MSG",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SpiderBG_MSG",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1500,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "pickOnlyOneRandom_False"
+          },
+          {
+            "param-id": "size_1"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "SpiderAnimPancarte",
+      "second-name": "SpiderAnimPancarte",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "SpiderAnimPancarte",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1500,
+        "outro-time": 500,
+        "Others": []
+      }
+    },
+    {
+      "first-name": "FxSquareLine2",
+      "second-name": "FxSquareLine2",
+      "enemy-group": "other",
+      "type-object": "warning-outro",
+      "spawn-name": "FxSquareLine2",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 1000,
+        "outro-time": 5000,
+        "Others": [
+          {
+            "param-id": "visual_FxSquareLine2"
+          },
+          {
+            "param-id": "direction_45"
+          },
+          {
+            "param-id": "size_40"
+          },
+          {
+            "param-id": "Delay_1000"
+          },
+          {
+            "param-id": "wiggleSpeed_0"
+          },
+          {
+            "param-id": "limit_10"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "LastTileSpikeBar",
+      "second-name": "LastTileSpikeBar",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "LastTileSpikeBar",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 500,
+        "Others": [
+          {
+            "param-id": "rotOffset_0"
+          },
+          {
+            "param-id": "size_100"
+          },
+          {
+            "param-id": "visual_LastTileSpikeBar"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "EqualizerAnim",
+      "second-name": "EqualizerAnim",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "EqualizerAnim",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 2000,
+        "Others": [
+          {
+            "param-id": "visual_EqualizerAnim"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "CustomMoveTrigger",
+      "second-name": "CustomMoveTrigger",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "CustomMoveTrigger",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "target"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "CustomScaleTrigger",
+      "second-name": "CustomScaleTrigger",
+      "enemy-group": "other",
+      "type-object": "outro",
+      "spawn-name": "CustomScaleTrigger",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 1000,
+        "Others": [
+          {
+            "param-id": "easing_CustomScaleTrigger"
+          },
+          {
+            "param-id": "target"
+          },
+          {
+            "param-id": "customScaleX_0"
+          },
+          {
+            "param-id": "customScaleY_0"
+          }
+        ]
+      }
+    },
+    {
+      "first-name": "playerImmortalityTrigger",
+      "second-name": "playerImmortalityTrigger",
+      "enemy-group": "other",
+      "type-object": "time",
+      "spawn-name": "playerImmortalityTrigger",
+      "parameters": {
+        "position": true,
+        "random-position": true,
+        "warning-time": 0,
+        "outro-time": 0,
+        "Others": [
+          {
+            "param-id": "customEnable_False"
+          }
+        ]
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bpm_0",
+      "first-name": "bpm",
+      "second-name": "bpm",
+      "export-path": "bpm/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rotOffset_0",
+      "first-name": "rotOffset",
+      "second-name": "rotOffset",
+      "export-path": "rotOffset/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "size_100",
+      "first-name": "size",
+      "second-name": "size",
+      "export-path": "size/value",
+      "type": "float",
+      "default-value": "100",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "invert_False",
+      "first-name": "invert",
+      "second-name": "invert",
+      "export-path": "invert/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "autoShakeCam_False",
+      "first-name": "autoShakeCam",
+      "second-name": "autoShakeCam",
+      "export-path": "autoShakeCam/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "autoRotate_True",
+      "first-name": "autoRotate",
+      "second-name": "autoRotate",
+      "export-path": "autoRotate/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "jumpDistance_100",
+      "first-name": "jumpDistance",
+      "second-name": "jumpDistance",
+      "export-path": "jumpDistance/value",
+      "type": "float",
+      "default-value": "100",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "modelSide_",
+      "first-name": "modelSide",
+      "second-name": "modelSide",
+      "export-path": "modelSide/value",
+      "type": "side",
+      "default-value": "",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "modelSide_right",
+      "first-name": "modelSide",
+      "second-name": "modelSide",
+      "export-path": "modelSide/value",
+      "type": "side",
+      "default-value": "right",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speed_1000",
+      "first-name": "speed",
+      "second-name": "speed",
+      "export-path": "speed/value",
+      "type": "float",
+      "default-value": "1000",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speed_7",
+      "first-name": "speed",
+      "second-name": "speed",
+      "export-path": "speed/value",
+      "type": "float",
+      "default-value": "7",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "wiggleSpeed_15",
+      "first-name": "wiggleSpeed",
+      "second-name": "wiggleSpeed",
+      "export-path": "wiggleSpeed/value",
+      "type": "float",
+      "default-value": "15",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "wiggleAngle_100",
+      "first-name": "wiggleAngle",
+      "second-name": "wiggleAngle",
+      "export-path": "wiggleAngle/value",
+      "type": "float",
+      "default-value": "100",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "size_40",
+      "first-name": "size",
+      "second-name": "size",
+      "export-path": "size/value",
+      "type": "float",
+      "default-value": "40",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "startFromEdge_False",
+      "first-name": "startFromEdge",
+      "second-name": "startFromEdge",
+      "export-path": "startFromEdge/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "bpm_126",
+      "first-name": "bpm",
+      "second-name": "bpm",
+      "export-path": "bpm/value",
+      "type": "float",
+      "default-value": "126",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "autoShakeCam_True",
+      "first-name": "autoShakeCam",
+      "second-name": "autoShakeCam",
+      "export-path": "autoShakeCam/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "shadowVisible_True",
+      "first-name": "shadowVisible",
+      "second-name": "shadowVisible",
+      "export-path": "shadowVisible/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "customChoice_FxSquareLine",
+      "first-name": "customChoice",
+      "second-name": "customChoice",
+      "export-path": "customChoice/value",
+      "type": "string-array",
+      "default-value": "ENEMY_APPEAR_SHOVEL_GROUND|ENEMY_APPEAR_SHOVEL_GROUND_SMALL|ENEMY_APPEAR_SQUARE_PRE_PARADISE_1|ENEMY_APPEAR_SQUARE_PRE_PARADISE_2|ENEMY_APPEAR_SQUARE_PRE_PARADISE_3|ENEMY_APPEAR_SQUARE_PRE_PARADISE_4|ENEMY_APPEAR_SQUARE_PRE_PARADISE_5|ENEMY_APPEAR_SQUARE_PRE_PARADISE_6|ENEMY_APPEAR_ROUND_SPIKES_1|ENEMY_APPEAR_ROUND_SPIKES_2|ENEMY_APPEAR_ROUND_SPIKES_3|ENEMY_APPEAR_ROUND_SPIKES_4|ENEMY_APPEAR_ROUND_SPIKES_5|ENEMY_APPEAR_ROUND_SPIKES_6|ENEMY_APPEAR_ROUND_SPIKES_7|ENEMY_APPEAR_ROUND_SPIKES_8|ENEMY_APPEAR_ROUND_SPIKES_9|ENEMY_APPEAR_ROUND_SPIKES_10|ENEMY_APPEAR_ROUND_SPIKES_11|ENEMY_APPEAR_ROUND_SPIKES_12|ENEMY_APPEAR_ROUND_SPIKES_13|ENEMY_APPEAR_ROUND_SPIKES_14|ENEMY_APPEAR_GHOST_DANCE|ENEMY_APPEAR_GHOST_DANCE_2|ENEMY_APPEAR_GHOST_DANCE_3|ENEMY_APPEAR_LITTLE_GHOST|ENEMY_APPEAR_GHOST_EVIL|ENEMY_APPEAR_SQUARE_RDE_POTION",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rotOffset_45",
+      "first-name": "rotOffset",
+      "second-name": "rotOffset",
+      "export-path": "rotOffset/value",
+      "type": "float",
+      "default-value": "45",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "wiggleSpeed_0",
+      "first-name": "wiggleSpeed",
+      "second-name": "wiggleSpeed",
+      "export-path": "wiggleSpeed/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "limit_0",
+      "first-name": "limit",
+      "second-name": "limit",
+      "export-path": "limit/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "customChoice_fxLineBowser",
+      "first-name": "customChoice",
+      "second-name": "customChoice",
+      "export-path": "customChoice/value",
+      "type": "string-array",
+      "default-value": "ENEMY_APPEAR_SHOVEL_GROUND|ENEMY_APPEAR_SHOVEL_GROUND_SMALL|ENEMY_APPEAR_SQUARE_PRE_PARADISE_1|ENEMY_APPEAR_SQUARE_PRE_PARADISE_2|ENEMY_APPEAR_SQUARE_PRE_PARADISE_3|ENEMY_APPEAR_SQUARE_PRE_PARADISE_4|ENEMY_APPEAR_SQUARE_PRE_PARADISE_5|ENEMY_APPEAR_SQUARE_PRE_PARADISE_6|ENEMY_APPEAR_ROUND_SPIKES_1|ENEMY_APPEAR_ROUND_SPIKES_2|ENEMY_APPEAR_ROUND_SPIKES_3|ENEMY_APPEAR_ROUND_SPIKES_4|ENEMY_APPEAR_ROUND_SPIKES_5|ENEMY_APPEAR_ROUND_SPIKES_6|ENEMY_APPEAR_ROUND_SPIKES_7|ENEMY_APPEAR_ROUND_SPIKES_8|ENEMY_APPEAR_ROUND_SPIKES_9|ENEMY_APPEAR_ROUND_SPIKES_10|ENEMY_APPEAR_ROUND_SPIKES_11|ENEMY_APPEAR_ROUND_SPIKES_12|ENEMY_APPEAR_ROUND_SPIKES_13|ENEMY_APPEAR_ROUND_SPIKES_14|ENEMY_APPEAR_GHOST_DANCE|ENEMY_APPEAR_GHOST_DANCE_2|ENEMY_APPEAR_GHOST_DANCE_3|ENEMY_APPEAR_LITTLE_GHOST|ENEMY_APPEAR_GHOST_EVIL|ENEMY_APPEAR_SQUARE_RDE_POTION",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "delayIntro_30",
+      "first-name": "delayIntro",
+      "second-name": "delayIntro",
+      "export-path": "delayIntro/value",
+      "type": "float",
+      "default-value": "30",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rotationSpeed_0",
+      "first-name": "rotationSpeed",
+      "second-name": "rotationSpeed",
+      "export-path": "rotationSpeed/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rotItself_0",
+      "first-name": "rotItself",
+      "second-name": "rotItself",
+      "export-path": "rotItself/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "autoRotateEach_True",
+      "first-name": "autoRotateEach",
+      "second-name": "autoRotateEach",
+      "export-path": "autoRotateEach/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "placeOnGrid_True",
+      "first-name": "placeOnGrid",
+      "second-name": "placeOnGrid",
+      "export-path": "placeOnGrid/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speed_0",
+      "first-name": "speed",
+      "second-name": "speed",
+      "export-path": "speed/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "distBetween_44",
+      "first-name": "distBetween",
+      "second-name": "distBetween",
+      "export-path": "distBetween/value",
+      "type": "float",
+      "default-value": "44",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "direction_0",
+      "first-name": "direction",
+      "second-name": "direction",
+      "export-path": "direction/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "leftNum_3",
+      "first-name": "leftNum",
+      "second-name": "leftNum",
+      "export-path": "leftNum/value",
+      "type": "float",
+      "default-value": "3",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rightNum_3",
+      "first-name": "rightNum",
+      "second-name": "rightNum",
+      "export-path": "rightNum/value",
+      "type": "float",
+      "default-value": "3",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "wiggle_0",
+      "first-name": "wiggle",
+      "second-name": "wiggle",
+      "export-path": "wiggle/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "wiggleRotBetween_90",
+      "first-name": "wiggleRotBetween",
+      "second-name": "wiggleRotBetween",
+      "export-path": "wiggleRotBetween/value",
+      "type": "float",
+      "default-value": "90",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "customChoice_fxLineOfRoundSpikes",
+      "first-name": "customChoice",
+      "second-name": "customChoice",
+      "export-path": "customChoice/value",
+      "type": "string-array",
+      "default-value": "ENEMY_APPEAR_SHOVEL_GROUND|ENEMY_APPEAR_SHOVEL_GROUND_SMALL|ENEMY_APPEAR_SQUARE_PRE_PARADISE_1|ENEMY_APPEAR_SQUARE_PRE_PARADISE_2|ENEMY_APPEAR_SQUARE_PRE_PARADISE_3|ENEMY_APPEAR_SQUARE_PRE_PARADISE_4|ENEMY_APPEAR_SQUARE_PRE_PARADISE_5|ENEMY_APPEAR_SQUARE_PRE_PARADISE_6|ENEMY_APPEAR_ROUND_SPIKES_1|ENEMY_APPEAR_ROUND_SPIKES_2|ENEMY_APPEAR_ROUND_SPIKES_3|ENEMY_APPEAR_ROUND_SPIKES_4|ENEMY_APPEAR_ROUND_SPIKES_5|ENEMY_APPEAR_ROUND_SPIKES_6|ENEMY_APPEAR_ROUND_SPIKES_7|ENEMY_APPEAR_ROUND_SPIKES_8|ENEMY_APPEAR_ROUND_SPIKES_9|ENEMY_APPEAR_ROUND_SPIKES_10|ENEMY_APPEAR_ROUND_SPIKES_11|ENEMY_APPEAR_ROUND_SPIKES_12|ENEMY_APPEAR_ROUND_SPIKES_13|ENEMY_APPEAR_ROUND_SPIKES_14|ENEMY_APPEAR_GHOST_DANCE|ENEMY_APPEAR_GHOST_DANCE_2|ENEMY_APPEAR_GHOST_DANCE_3|ENEMY_APPEAR_LITTLE_GHOST|ENEMY_APPEAR_GHOST_EVIL|ENEMY_APPEAR_SQUARE_RDE_POTION",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "num_5",
+      "first-name": "num",
+      "second-name": "num",
+      "export-path": "num/value",
+      "type": "float",
+      "default-value": "5",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "autoStopCreatingOutSideOfCam_True",
+      "first-name": "autoStopCreatingOutSideOfCam",
+      "second-name": "autoStopCreatingOutSideOfCam",
+      "export-path": "autoStopCreatingOutSideOfCam/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "bounceOffWall_True",
+      "first-name": "bounceOffWall",
+      "second-name": "bounceOffWall",
+      "export-path": "bounceOffWall/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speed_5",
+      "first-name": "speed",
+      "second-name": "speed",
+      "export-path": "speed/value",
+      "type": "float",
+      "default-value": "5",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedDestroy_1",
+      "first-name": "speedDestroy",
+      "second-name": "speedDestroy",
+      "export-path": "speedDestroy/value",
+      "type": "float",
+      "default-value": "1",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "linkAnim_contraEnemy",
+      "first-name": "linkAnim",
+      "second-name": "linkAnim",
+      "export-path": "linkAnim/value",
+      "type": "string-array",
+      "default-value": "FX_CONTRA_LINK_1|FX_CONTRA_LINK_2",
+      "visible": true,
+      "contains-param-field": false
+    },
+    {
+      "id": "edgeAnim_contraEnemy",
+      "first-name": "edgeAnim",
+      "second-name": "edgeAnim",
+      "export-path": "edgeAnim/value",
+      "type": "string-array",
+      "default-value": "FX_CONTRA_EDGE_1|FX_CONTRA_EDGE_2",
+      "visible": true,
+      "contains-param-field": false
+    },
+    {
+      "id": "spikes_10",
+      "first-name": "spikes",
+      "second-name": "spikes",
+      "export-path": "spikes/value",
+      "type": "float",
+      "default-value": "10",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "width_100",
+      "first-name": "width",
+      "second-name": "width",
+      "export-path": "width/value",
+      "type": "float",
+      "default-value": "100",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "widthRandom_300",
+      "first-name": "widthRandom",
+      "second-name": "widthRandom",
+      "export-path": "widthRandom/value",
+      "type": "float",
+      "default-value": "300",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "reverseAnim_False",
+      "first-name": "reverseAnim",
+      "second-name": "reverseAnim",
+      "export-path": "reverseAnim/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "limit_20",
+      "first-name": "limit",
+      "second-name": "limit",
+      "export-path": "limit/value",
+      "type": "float",
+      "default-value": "20",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "wiggleSpeed_20",
+      "first-name": "wiggleSpeed",
+      "second-name": "wiggleSpeed",
+      "export-path": "wiggleSpeed/value",
+      "type": "float",
+      "default-value": "20",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "widthRandomDelay_150",
+      "first-name": "widthRandomDelay",
+      "second-name": "widthRandomDelay",
+      "export-path": "widthRandomDelay/value",
+      "type": "float",
+      "default-value": "150",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "customChoice_FxSpectrumBar",
+      "first-name": "customChoice",
+      "second-name": "customChoice",
+      "export-path": "customChoice/value",
+      "type": "string-array",
+      "default-value": "FX_SPECTRUM_BAR_SIDE_1|FX_SPECTRUM_BAR_SIDE_2|FX_SPECTRUM_BAR_SIDE_3",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "size_325",
+      "first-name": "size",
+      "second-name": "size",
+      "export-path": "size/value",
+      "type": "float",
+      "default-value": "325",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "numPoints_0",
+      "first-name": "numPoints",
+      "second-name": "numPoints",
+      "export-path": "numPoints/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "moveScale_0",
+      "first-name": "moveScale",
+      "second-name": "moveScale",
+      "export-path": "moveScale/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speed_10",
+      "first-name": "speed",
+      "second-name": "speed",
+      "export-path": "speed/value",
+      "type": "float",
+      "default-value": "10",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "width_720",
+      "first-name": "width",
+      "second-name": "width",
+      "export-path": "width/value",
+      "type": "float",
+      "default-value": "720",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "followCam_False",
+      "first-name": "followCam",
+      "second-name": "followCam",
+      "export-path": "followCam/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rotOffset_30",
+      "first-name": "rotOffset",
+      "second-name": "rotOffset",
+      "export-path": "rotOffset/value",
+      "type": "float",
+      "default-value": "30",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "spikes_8",
+      "first-name": "spikes",
+      "second-name": "spikes",
+      "export-path": "spikes/value",
+      "type": "float",
+      "default-value": "8",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speed_15",
+      "first-name": "speed",
+      "second-name": "speed",
+      "export-path": "speed/value",
+      "type": "float",
+      "default-value": "15",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "flashWhiteOnBoom_False",
+      "first-name": "flashWhiteOnBoom",
+      "second-name": "flashWhiteOnBoom",
+      "export-path": "flashWhiteOnBoom/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "customChoice_Wheel",
+      "first-name": "customChoice",
+      "second-name": "customChoice",
+      "export-path": "customChoice/value",
+      "type": "string-array",
+      "default-value": "ENEMY_APPEAR_SHOVEL_GROUND|ENEMY_APPEAR_SHOVEL_GROUND_SMALL|ENEMY_APPEAR_SQUARE_PRE_PARADISE_1|ENEMY_APPEAR_SQUARE_PRE_PARADISE_2|ENEMY_APPEAR_SQUARE_PRE_PARADISE_3|ENEMY_APPEAR_SQUARE_PRE_PARADISE_4|ENEMY_APPEAR_SQUARE_PRE_PARADISE_5|ENEMY_APPEAR_SQUARE_PRE_PARADISE_6|ENEMY_APPEAR_ROUND_SPIKES_1|ENEMY_APPEAR_ROUND_SPIKES_2|ENEMY_APPEAR_ROUND_SPIKES_3|ENEMY_APPEAR_ROUND_SPIKES_4|ENEMY_APPEAR_ROUND_SPIKES_5|ENEMY_APPEAR_ROUND_SPIKES_6|ENEMY_APPEAR_ROUND_SPIKES_7|ENEMY_APPEAR_ROUND_SPIKES_8|ENEMY_APPEAR_ROUND_SPIKES_9|ENEMY_APPEAR_ROUND_SPIKES_10|ENEMY_APPEAR_ROUND_SPIKES_11|ENEMY_APPEAR_ROUND_SPIKES_12|ENEMY_APPEAR_ROUND_SPIKES_13|ENEMY_APPEAR_ROUND_SPIKES_14|ENEMY_APPEAR_GHOST_DANCE|ENEMY_APPEAR_GHOST_DANCE_2|ENEMY_APPEAR_GHOST_DANCE_3|ENEMY_APPEAR_LITTLE_GHOST|ENEMY_APPEAR_GHOST_EVIL|ENEMY_APPEAR_SQUARE_RDE_POTION",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "num_2",
+      "first-name": "num",
+      "second-name": "num",
+      "export-path": "num/value",
+      "type": "float",
+      "default-value": "2",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rotationSpeedX_0",
+      "first-name": "rotationSpeedX",
+      "second-name": "rotationSpeedX",
+      "export-path": "rotationSpeedX/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rotationSpeedY_0",
+      "first-name": "rotationSpeedY",
+      "second-name": "rotationSpeedY",
+      "export-path": "rotationSpeedY/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "delay_0",
+      "first-name": "delay",
+      "second-name": "delay",
+      "export-path": "delay/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "distFromCenterX_150",
+      "first-name": "distFromCenterX",
+      "second-name": "distFromCenterX",
+      "export-path": "distFromCenterX/value",
+      "type": "float",
+      "default-value": "150",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "distFromCenterY_150",
+      "first-name": "distFromCenterY",
+      "second-name": "distFromCenterY",
+      "export-path": "distFromCenterY/value",
+      "type": "float",
+      "default-value": "150",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "withCenter_False",
+      "first-name": "withCenter",
+      "second-name": "withCenter",
+      "export-path": "withCenter/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "withLines_False",
+      "first-name": "withLines",
+      "second-name": "withLines",
+      "export-path": "withLines/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rotSpeed_0",
+      "first-name": "rotSpeed",
+      "second-name": "rotSpeed",
+      "export-path": "rotSpeed/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "static_False",
+      "first-name": "static",
+      "second-name": "static",
+      "export-path": "static/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "ammoSpeed_0",
+      "first-name": "ammoSpeed",
+      "second-name": "ammoSpeed",
+      "export-path": "ammoSpeed/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_SquareWave",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "FX_SQUARE_WAVE|FX_SQUARE_WAVE_2",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "target",
+      "first-name": "Target",
+      "second-name": "Target",
+      "export-path": "target/value",
+      "type": "spawn-target",
+      "default-value": "",
+      "visible": true,
+      "contains-param-field": true,
+	  "original-jsb-param-name": "target"
+    },
+    {
+      "id": "pickOnlyOneRandom_False",
+      "first-name": "pickOnlyOneRandom",
+      "second-name": "pickOnlyOneRandom",
+      "export-path": "pickOnlyOneRandom/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "vx_0",
+      "first-name": "vx",
+      "second-name": "vx",
+      "export-path": "vx/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "vy_0",
+      "first-name": "vy",
+      "second-name": "vy",
+      "export-path": "vy/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "size_0",
+      "first-name": "size",
+      "second-name": "size",
+      "export-path": "size/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "splash_False",
+      "first-name": "splash",
+      "second-name": "splash",
+      "export-path": "splash/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "reduceSize_0",
+      "first-name": "reduceSize",
+      "second-name": "reduceSize",
+      "export-path": "reduceSize/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "reduceSpeedEase_100",
+      "first-name": "reduceSpeedEase",
+      "second-name": "reduceSpeedEase",
+      "export-path": "reduceSpeedEase/value",
+      "type": "float",
+      "default-value": "100",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "reverseSpeed_False",
+      "first-name": "reverseSpeed",
+      "second-name": "reverseSpeed",
+      "export-path": "reverseSpeed/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "shakeOnIdle_False",
+      "first-name": "shakeOnIdle",
+      "second-name": "shakeOnIdle",
+      "export-path": "shakeOnIdle/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_BeamMoving",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "ENEMY_BEAM|ENEMY_BEAM_2|ENEMY_BEAM_3|ENEMY_BEAM_ZIPPER",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "directionMove_0",
+      "first-name": "directionMove",
+      "second-name": "directionMove",
+      "export-path": "directionMove/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "startMovingAfterWarning_False",
+      "first-name": "startMovingAfterWarning",
+      "second-name": "startMovingAfterWarning",
+      "export-path": "startMovingAfterWarning/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "reversed_False",
+      "first-name": "reversed",
+      "second-name": "reversed",
+      "export-path": "reversed/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedRotX_1",
+      "first-name": "speedRotX",
+      "second-name": "speedRotX",
+      "export-path": "speedRotX/value",
+      "type": "float",
+      "default-value": "1",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedRotY_0.5",
+      "first-name": "speedRotY",
+      "second-name": "speedRotY",
+      "export-path": "speedRotY/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "xDistance_600",
+      "first-name": "xDistance",
+      "second-name": "xDistance",
+      "export-path": "xDistance/value",
+      "type": "float",
+      "default-value": "600",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "yDistance_300",
+      "first-name": "yDistance",
+      "second-name": "yDistance",
+      "export-path": "yDistance/value",
+      "type": "float",
+      "default-value": "300",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_FxClashDiamond",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "FX_SHOVEL_GROUND_SMALL|FX_RDE_POTION_ROUND|ENEMY_ROUND_SPIKES|ENEMY_ROUND_SPIKES_2|ENEMY_ROUND_SPIKES_3|ENEMY_ROUND_SPIKES_4|ENEMY_ROUND_SPIKES_5|ENEMY_ROUND_SPIKES_6|ENEMY_ROUND_SPIKES_7|ENEMY_ROUND_SPIKES_8|ENEMY_ROUND_SPIKES_9|ENEMY_ROUND_SPIKES_10|ENEMY_ROUND_SPIKES_11|ENEMY_ROUND_SPIKES_12|ENEMY_ROUND_SPIKES_13|ENEMY_ROUND_SPIKES_14",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_FxClashCannon",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "FX_SHOVEL_GROUND_SMALL|FX_RDE_POTION_ROUND|ENEMY_ROUND_SPIKES|ENEMY_ROUND_SPIKES_2|ENEMY_ROUND_SPIKES_3|ENEMY_ROUND_SPIKES_4|ENEMY_ROUND_SPIKES_5|ENEMY_ROUND_SPIKES_6|ENEMY_ROUND_SPIKES_7|ENEMY_ROUND_SPIKES_8|ENEMY_ROUND_SPIKES_9|ENEMY_ROUND_SPIKES_10|ENEMY_ROUND_SPIKES_11|ENEMY_ROUND_SPIKES_12|ENEMY_ROUND_SPIKES_13|ENEMY_ROUND_SPIKES_14",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_fxPiston",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "FX_PISTON|FX_PISTON_2",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "size_180",
+      "first-name": "size",
+      "second-name": "size",
+      "export-path": "size/value",
+      "type": "float",
+      "default-value": "180",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speed_1",
+      "first-name": "speed",
+      "second-name": "speed",
+      "export-path": "speed/value",
+      "type": "float",
+      "default-value": "1",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "sizeMax_280",
+      "first-name": "sizeMax",
+      "second-name": "sizeMax",
+      "export-path": "sizeMax/value",
+      "type": "float",
+      "default-value": "280",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "dontFlashWhite_False",
+      "first-name": "dontFlashWhite",
+      "second-name": "dontFlashWhite",
+      "export-path": "dontFlashWhite/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "placeOnGrid_False",
+      "first-name": "placeOnGrid",
+      "second-name": "placeOnGrid",
+      "export-path": "placeOnGrid/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "size_360",
+      "first-name": "size",
+      "second-name": "size",
+      "export-path": "size/value",
+      "type": "float",
+      "default-value": "360",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "fadeInAlpha_False",
+      "first-name": "fadeInAlpha",
+      "second-name": "fadeInAlpha",
+      "export-path": "fadeInAlpha/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "xDistance_200",
+      "first-name": "xDistance",
+      "second-name": "xDistance",
+      "export-path": "xDistance/value",
+      "type": "float",
+      "default-value": "200",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "yDistance_100",
+      "first-name": "yDistance",
+      "second-name": "yDistance",
+      "export-path": "yDistance/value",
+      "type": "float",
+      "default-value": "100",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "isHalf_False",
+      "first-name": "isHalf",
+      "second-name": "isHalf",
+      "export-path": "isHalf/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "showWarning_True",
+      "first-name": "showWarning",
+      "second-name": "showWarning",
+      "export-path": "showWarning/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedRotate_3",
+      "first-name": "speedRotate",
+      "second-name": "speedRotate",
+      "export-path": "speedRotate/value",
+      "type": "float",
+      "default-value": "3",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "widthRotate_100",
+      "first-name": "widthRotate",
+      "second-name": "widthRotate",
+      "export-path": "widthRotate/value",
+      "type": "float",
+      "default-value": "100",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rotateItselfSpeed_0",
+      "first-name": "rotateItselfSpeed",
+      "second-name": "rotateItselfSpeed",
+      "export-path": "rotateItselfSpeed/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "warningDoDmg_False",
+      "first-name": "warningDoDmg",
+      "second-name": "warningDoDmg",
+      "export-path": "warningDoDmg/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_SpikeBar",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "ENEMY_SPIKE_BAR|ENEMY_SPIKE_BAR_2",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speed_0.5",
+      "first-name": "speed",
+      "second-name": "speed",
+      "export-path": "speed/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_FxTokyoSkiesDiamond",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "FX_SHOVEL_GROUND_SMALL|FX_RDE_POTION_ROUND|ENEMY_ROUND_SPIKES|ENEMY_ROUND_SPIKES_2|ENEMY_ROUND_SPIKES_3|ENEMY_ROUND_SPIKES_4|ENEMY_ROUND_SPIKES_5|ENEMY_ROUND_SPIKES_6|ENEMY_ROUND_SPIKES_7|ENEMY_ROUND_SPIKES_8|ENEMY_ROUND_SPIKES_9|ENEMY_ROUND_SPIKES_10|ENEMY_ROUND_SPIKES_11|ENEMY_ROUND_SPIKES_12|ENEMY_ROUND_SPIKES_13|ENEMY_ROUND_SPIKES_14",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rotateSpeed_8",
+      "first-name": "rotateSpeed",
+      "second-name": "rotateSpeed",
+      "export-path": "rotateSpeed/value",
+      "type": "float",
+      "default-value": "8",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "doIntroShake_True",
+      "first-name": "doIntroShake",
+      "second-name": "doIntroShake",
+      "export-path": "doIntroShake/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_RoundSpikesUnder",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "FX_SHOVEL_GROUND_SMALL|FX_RDE_POTION_ROUND|ENEMY_ROUND_SPIKES|ENEMY_ROUND_SPIKES_2|ENEMY_ROUND_SPIKES_3|ENEMY_ROUND_SPIKES_4|ENEMY_ROUND_SPIKES_5|ENEMY_ROUND_SPIKES_6|ENEMY_ROUND_SPIKES_7|ENEMY_ROUND_SPIKES_8|ENEMY_ROUND_SPIKES_9|ENEMY_ROUND_SPIKES_10|ENEMY_ROUND_SPIKES_11|ENEMY_ROUND_SPIKES_12|ENEMY_ROUND_SPIKES_13|ENEMY_ROUND_SPIKES_14",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "size_50",
+      "first-name": "size",
+      "second-name": "size",
+      "export-path": "size/value",
+      "type": "float",
+      "default-value": "50",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "showAppearFx_True",
+      "first-name": "showAppearFx",
+      "second-name": "showAppearFx",
+      "export-path": "showAppearFx/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "spikes_3",
+      "first-name": "spikes",
+      "second-name": "spikes",
+      "export-path": "spikes/value",
+      "type": "float",
+      "default-value": "3",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speed_100",
+      "first-name": "speed",
+      "second-name": "speed",
+      "export-path": "speed/value",
+      "type": "float",
+      "default-value": "100",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "shootOnceAuto_False",
+      "first-name": "shootOnceAuto",
+      "second-name": "shootOnceAuto",
+      "export-path": "shootOnceAuto/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "distanceX_1",
+      "first-name": "distanceX",
+      "second-name": "distanceX",
+      "export-path": "distanceX/value",
+      "type": "float",
+      "default-value": "1",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "distanceY_1",
+      "first-name": "distanceY",
+      "second-name": "distanceY",
+      "export-path": "distanceY/value",
+      "type": "float",
+      "default-value": "1",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedX_25",
+      "first-name": "speedX",
+      "second-name": "speedX",
+      "export-path": "speedX/value",
+      "type": "float",
+      "default-value": "25",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedY_10",
+      "first-name": "speedY",
+      "second-name": "speedY",
+      "export-path": "speedY/value",
+      "type": "float",
+      "default-value": "10",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_COD_Trail",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "FX_SHOVEL_GROUND_SMALL|FX_RDE_POTION_ROUND|ENEMY_ROUND_SPIKES|ENEMY_ROUND_SPIKES_2|ENEMY_ROUND_SPIKES_3|ENEMY_ROUND_SPIKES_4|ENEMY_ROUND_SPIKES_5|ENEMY_ROUND_SPIKES_6|ENEMY_ROUND_SPIKES_7|ENEMY_ROUND_SPIKES_8|ENEMY_ROUND_SPIKES_9|ENEMY_ROUND_SPIKES_10|ENEMY_ROUND_SPIKES_11|ENEMY_ROUND_SPIKES_12|ENEMY_ROUND_SPIKES_13|ENEMY_ROUND_SPIKES_14",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedX_15",
+      "first-name": "speedX",
+      "second-name": "speedX",
+      "export-path": "speedX/value",
+      "type": "float",
+      "default-value": "15",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedY_4",
+      "first-name": "speedY",
+      "second-name": "speedY",
+      "export-path": "speedY/value",
+      "type": "float",
+      "default-value": "4",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "AmmoSpeed_0.1",
+      "first-name": "AmmoSpeed",
+      "second-name": "AmmoSpeed",
+      "export-path": "AmmoSpeed/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "AmmoPerSec_10",
+      "first-name": "AmmoPerSec",
+      "second-name": "AmmoPerSec",
+      "export-path": "AmmoPerSec/value",
+      "type": "float",
+      "default-value": "10",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speed_2",
+      "first-name": "speed",
+      "second-name": "speed",
+      "export-path": "speed/value",
+      "type": "float",
+      "default-value": "2",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "size_150",
+      "first-name": "size",
+      "second-name": "size",
+      "export-path": "size/value",
+      "type": "float",
+      "default-value": "150",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_COD_Solo_Ball",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "FX_SHOVEL_GROUND_SMALL|FX_RDE_POTION_ROUND|ENEMY_ROUND_SPIKES|ENEMY_ROUND_SPIKES_2|ENEMY_ROUND_SPIKES_3|ENEMY_ROUND_SPIKES_4|ENEMY_ROUND_SPIKES_5|ENEMY_ROUND_SPIKES_6|ENEMY_ROUND_SPIKES_7|ENEMY_ROUND_SPIKES_8|ENEMY_ROUND_SPIKES_9|ENEMY_ROUND_SPIKES_10|ENEMY_ROUND_SPIKES_11|ENEMY_ROUND_SPIKES_12|ENEMY_ROUND_SPIKES_13|ENEMY_ROUND_SPIKES_14",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "Lenght_4",
+      "first-name": "Lenght",
+      "second-name": "Lenght",
+      "export-path": "Lenght/value",
+      "type": "float",
+      "default-value": "4",
+      "visible": true,
+      "contains-param-field": false
+    },
+    {
+      "id": "Distance_3",
+      "first-name": "Distance",
+      "second-name": "Distance",
+      "export-path": "Distance/value",
+      "type": "float",
+      "default-value": "3",
+      "visible": true,
+      "contains-param-field": false
+    },
+    {
+      "id": "Position/Ease_True",
+      "first-name": "Position/Ease",
+      "second-name": "Position/Ease",
+      "export-path": "Position/Ease/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": false
+    },
+    {
+      "id": "layer_EffectSendToBackFront",
+      "first-name": "layer",
+      "second-name": "layer",
+      "export-path": "layer/value",
+      "type": "string-array",
+      "default-value": "back|front",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "targetSpeed_1",
+      "first-name": "targetSpeed",
+      "second-name": "targetSpeed",
+      "export-path": "targetSpeed/value",
+      "type": "float",
+      "default-value": "1",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedEasing_PivotRotate",
+      "first-name": "speedEasing",
+      "second-name": "speedEasing",
+      "export-path": "speedEasing/value",
+      "type": "string-array",
+      "default-value": "Sine In|Sine Out|Sine InOut|Cubic In|Cubic Out|Cubic InOut|Circular In|Circular Out|Circular InOut|Quart In|Quart Out|Quart InOut|Quint In|Quint Out|Quint InOut|Elastic In|Elastic Out|Elastic InOut|Bounce In|Bounce Out|Bounce InOut|Back In|Back Out|Back InOut|Spring|Linear",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedAsDegrees_True",
+      "first-name": "speedAsDegrees",
+      "second-name": "speedAsDegrees",
+      "export-path": "speedAsDegrees/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "targetRadius_-1",
+      "first-name": "targetRadius",
+      "second-name": "targetRadius",
+      "export-path": "targetRadius/value",
+      "type": "float",
+      "default-value": "-1",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "radiusEasing_PivotRotate",
+      "first-name": "radiusEasing",
+      "second-name": "radiusEasing",
+      "export-path": "radiusEasing/value",
+      "type": "string-array",
+      "default-value": "Sine In|Sine Out|Sine InOut|Cubic In|Cubic Out|Cubic InOut|Circular In|Circular Out|Circular InOut|Quart In|Quart Out|Quart InOut|Quint In|Quint Out|Quint InOut|Elastic In|Elastic Out|Elastic InOut|Bounce In|Bounce Out|Bounce InOut|Back In|Back Out|Back InOut|Spring|Linear",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "rotateVisual_True",
+      "first-name": "rotateVisual",
+      "second-name": "rotateVisual",
+      "export-path": "rotateVisual/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedX_1",
+      "first-name": "speedX",
+      "second-name": "speedX",
+      "export-path": "speedX/value",
+      "type": "float",
+      "default-value": "1",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speedY_1",
+      "first-name": "speedY",
+      "second-name": "speedY",
+      "export-path": "speedY/value",
+      "type": "float",
+      "default-value": "1",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "absolute_True",
+      "first-name": "absolute",
+      "second-name": "absolute",
+      "export-path": "absolute/value",
+      "type": "bool",
+      "default-value": "True",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "customChoice_FxSquareLineRounded",
+      "first-name": "customChoice",
+      "second-name": "customChoice",
+      "export-path": "customChoice/value",
+      "type": "string-array",
+      "default-value": "ENEMY_APPEAR_SHOVEL_GROUND|ENEMY_APPEAR_SHOVEL_GROUND_SMALL|ENEMY_APPEAR_SQUARE_PRE_PARADISE_1|ENEMY_APPEAR_SQUARE_PRE_PARADISE_2|ENEMY_APPEAR_SQUARE_PRE_PARADISE_3|ENEMY_APPEAR_SQUARE_PRE_PARADISE_4|ENEMY_APPEAR_SQUARE_PRE_PARADISE_5|ENEMY_APPEAR_SQUARE_PRE_PARADISE_6|ENEMY_APPEAR_ROUND_SPIKES_1|ENEMY_APPEAR_ROUND_SPIKES_2|ENEMY_APPEAR_ROUND_SPIKES_3|ENEMY_APPEAR_ROUND_SPIKES_4|ENEMY_APPEAR_ROUND_SPIKES_5|ENEMY_APPEAR_ROUND_SPIKES_6|ENEMY_APPEAR_ROUND_SPIKES_7|ENEMY_APPEAR_ROUND_SPIKES_8|ENEMY_APPEAR_ROUND_SPIKES_9|ENEMY_APPEAR_ROUND_SPIKES_10|ENEMY_APPEAR_ROUND_SPIKES_11|ENEMY_APPEAR_ROUND_SPIKES_12|ENEMY_APPEAR_ROUND_SPIKES_13|ENEMY_APPEAR_ROUND_SPIKES_14|ENEMY_APPEAR_GHOST_DANCE|ENEMY_APPEAR_GHOST_DANCE_2|ENEMY_APPEAR_GHOST_DANCE_3|ENEMY_APPEAR_LITTLE_GHOST|ENEMY_APPEAR_GHOST_EVIL|ENEMY_APPEAR_SQUARE_RDE_POTION",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "height_100",
+      "first-name": "height",
+      "second-name": "height",
+      "export-path": "height/value",
+      "type": "float",
+      "default-value": "100",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_BeamBorderless",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "ENEMY_BEAM|ENEMY_BEAM_2|ENEMY_BEAM_3|ENEMY_BEAM_ZIPPER|ENEMY_BEAM_BLESS_ZIP_M|ENEMY_BEAM_BLESS_ZIP_S",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "hardcore_False",
+      "first-name": "hardcore",
+      "second-name": "hardcore",
+      "export-path": "hardcore/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "speed_3",
+      "first-name": "speed",
+      "second-name": "speed",
+      "export-path": "speed/value",
+      "type": "float",
+      "default-value": "3",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "size_1",
+      "first-name": "size",
+      "second-name": "size",
+      "export-path": "size/value",
+      "type": "float",
+      "default-value": "1",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_FxSquareLine2",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "ENEMY_APPEAR_SHOVEL_GROUND|ENEMY_APPEAR_SHOVEL_GROUND_SMALL|ENEMY_APPEAR_SQUARE_PRE_PARADISE_1|ENEMY_APPEAR_SQUARE_PRE_PARADISE_2|ENEMY_APPEAR_SQUARE_PRE_PARADISE_3|ENEMY_APPEAR_SQUARE_PRE_PARADISE_4|ENEMY_APPEAR_SQUARE_PRE_PARADISE_5|ENEMY_APPEAR_SQUARE_PRE_PARADISE_6|ENEMY_APPEAR_ROUND_SPIKES_1|ENEMY_APPEAR_ROUND_SPIKES_2|ENEMY_APPEAR_ROUND_SPIKES_3|ENEMY_APPEAR_ROUND_SPIKES_4|ENEMY_APPEAR_ROUND_SPIKES_5|ENEMY_APPEAR_ROUND_SPIKES_6|ENEMY_APPEAR_ROUND_SPIKES_7|ENEMY_APPEAR_ROUND_SPIKES_8|ENEMY_APPEAR_ROUND_SPIKES_9|ENEMY_APPEAR_ROUND_SPIKES_10|ENEMY_APPEAR_ROUND_SPIKES_11|ENEMY_APPEAR_ROUND_SPIKES_12|ENEMY_APPEAR_ROUND_SPIKES_13|ENEMY_APPEAR_ROUND_SPIKES_14|ENEMY_APPEAR_GHOST_DANCE|ENEMY_APPEAR_GHOST_DANCE_2|ENEMY_APPEAR_GHOST_DANCE_3|ENEMY_APPEAR_LITTLE_GHOST|ENEMY_APPEAR_GHOST_EVIL|ENEMY_APPEAR_SQUARE_RDE_POTION",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "direction_45",
+      "first-name": "direction",
+      "second-name": "direction",
+      "export-path": "direction/value",
+      "type": "float",
+      "default-value": "45",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "Delay_1000",
+      "first-name": "Delay",
+      "second-name": "Delay",
+      "export-path": "Delay/value",
+      "type": "float",
+      "default-value": "1000",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "limit_10",
+      "first-name": "limit",
+      "second-name": "limit",
+      "export-path": "limit/value",
+      "type": "float",
+      "default-value": "10",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_LastTileSpikeBar",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "ENEMY_SPIKE_BAR|ENEMY_SPIKE_BAR_2",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "visual_EqualizerAnim",
+      "first-name": "visual",
+      "second-name": "visual",
+      "export-path": "visual/value",
+      "type": "string-array",
+      "default-value": "FX_EQUALIZER_BORN_SURVIVOR|FX_EQUALIZER_NATURAL_PREDATOR|FX_EQUALIZER_YOURE_BORN_SURVIVOR|FX_EQUALIZER_CLOSE|FX_EQUALIZER_CLOSE_SMALL",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "easing_CustomScaleTrigger",
+      "first-name": "easing",
+      "second-name": "easing",
+      "export-path": "easing/value",
+      "type": "string-array",
+      "default-value": "Sine In|Sine Out|Sine InOut|Cubic In|Cubic Out|Cubic InOut|Circular In|Circular Out|Circular InOut|Quart In|Quart Out|Quart InOut|Quint In|Quint Out|Quint InOut|Elastic In|Elastic Out|Elastic InOut|Bounce In|Bounce Out|Bounce InOut|Back In|Back Out|Back InOut|Spring|Linear",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "customScaleX_0",
+      "first-name": "customScaleX",
+      "second-name": "customScaleX",
+      "export-path": "customScaleX/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "customScaleY_0",
+      "first-name": "customScaleY",
+      "second-name": "customScaleY",
+      "export-path": "customScaleY/value",
+      "type": "float",
+      "default-value": "0",
+      "visible": true,
+      "contains-param-field": true
+    },
+    {
+      "id": "customEnable_False",
+      "first-name": "customEnable",
+      "second-name": "customEnable",
+      "export-path": "customEnable/value",
+      "type": "bool",
+      "default-value": "False",
+      "visible": true,
+      "contains-param-field": true
+    }
+  ]
+}
