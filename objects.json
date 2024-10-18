@@ -1146,7 +1146,7 @@
     {
       "first-name": "EffectVelocity",
       "second-name": "EffectVelocity",
-      "enemy-group": "triggers",
+      "enemy-group": "effects",
       "type-object": "time",
       "spawn-name": "EffectVelocity",
       "parameters": {
