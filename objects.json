@@ -287,7 +287,7 @@
     {
       "first-name": "CavernSpikes",
       "second-name": "CavernSpikes",
-      "enemy-group": "other",
+      "enemy-group": "attacks",
       "type-object": "warning-outro",
       "spawn-name": "CavernSpikes",
       "parameters": {
@@ -419,7 +419,7 @@
     {
       "first-name": "CavernWater",
       "second-name": "CavernWater",
-      "enemy-group": "other",
+      "enemy-group": "attacks",
       "type-object": "warning",
       "spawn-name": "CavernWater",
       "parameters": {
@@ -1146,7 +1146,7 @@
     {
       "first-name": "EffectVelocity",
       "second-name": "EffectVelocity",
-      "enemy-group": "other",
+      "enemy-group": "triggers",
       "type-object": "time",
       "spawn-name": "EffectVelocity",
       "parameters": {
@@ -1785,7 +1785,7 @@
     {
       "first-name": "onTheRunGo",
       "second-name": "onTheRunGo",
-      "enemy-group": "other",
+      "enemy-group": "effects",
       "type-object": "outro",
       "spawn-name": "onTheRunGo",
       "parameters": {
@@ -1803,7 +1803,7 @@
     {
       "first-name": "SpikeBar",
       "second-name": "SpikeBar",
-      "enemy-group": "other",
+      "enemy-group": "attacks",
       "type-object": "warning-outro",
       "spawn-name": "SpikeBar",
       "parameters": {
@@ -1996,7 +1996,7 @@
     {
       "first-name": "RDE_Potion",
       "second-name": "RDE_Potion",
-      "enemy-group": "other",
+      "enemy-group": "attacks",
       "type-object": "warning-outro",
       "spawn-name": "RDE_Potion",
       "parameters": {
